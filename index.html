@@ -25,8 +25,8 @@
 
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-black">
         <main>
-            <h4>Kepada <span>Bapak Imam Ansori, </span></h4>
-            <!-- <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4> -->
+            <!-- <h4>Kepada <span>Bapak Imam Ansori, </span></h4> -->
+            <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
             <h1>Khairah & Choir</h1>
             <p>Akan melangsungkan resepsi pernikahan dalam:</p>
             <div class="simply-countdown"></div>
@@ -116,7 +116,7 @@
                             <p>Putri Ke-4 dari Bpk. Ade SUHANA Abu Tsalis <br> dan <br> Ibu Anis Virdina</p>
                         </div>
                         <div class="col-4">
-                            <img src="img/khoir.png" alt="Sandhika Galih" class="img-responsive rounded-circle">
+                            <img src="img/k.png" alt="Sandhika Galih" class="img-responsive rounded-circle">
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-4">
-                            <img src="img/choir.png" alt="Nofariza" class="img-responsive rounded-circle">
+                            <img src="img/c.png" alt="Nofariza" class="img-responsive rounded-circle">
                         </div>
                         <div class="col-8">
                             <h3>Bayu Fitrah Choir</h3>
@@ -290,13 +290,13 @@
 
             <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
                 <div class="col mt-3">
-                    <a href="img/choir.png" data-toggle="lightbox" data-caption="Khairah & Choir 1" data-gallery="mygallery">
-                        <img src="img/choir.png" alt="Khairah & Choir 1" class="img-fluid w-100 rounded">
+                    <a href="img/c.png" data-toggle="lightbox" data-caption="Khairah & Choir 1" data-gallery="mygallery">
+                        <img src="img/c.png" alt="Khairah & Choir 1" class="img-fluid w-100 rounded">
                     </a>
                 </div>
                 <div class="col mt-3">
-                    <a href="img/khoir.png" data-toggle="lightbox" data-caption="Khairah & Choir 2" data-gallery="mygallery">
-                        <img src="img/khoir.png" alt="Khairah & Choir 2" class="img-fluid w-100 rounded">
+                    <a href="img/k.png" data-toggle="lightbox" data-caption="Khairah & Choir 2" data-gallery="mygallery">
+                        <img src="img/k.png" alt="Khairah & Choir 2" class="img-fluid w-100 rounded">
                     </a>
                 </div>
                 <div class="col mt-3">
@@ -569,8 +569,8 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const nama = urlParams.get('n') || '';
-        <!-- const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i'; -->
-        const pronoun = urlParams.get('p') || 'Bapak Imam Ansori';
+        const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+        <!-- const pronoun = urlParams.get('p') || 'Bapak Imam Ansori'; -->
         const namaContainer = document.querySelector('.hero h4 span');
         namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
 
