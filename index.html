@@ -25,40 +25,24 @@
 
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-black">
         <main>
-            <!-- <h4>Kepada <span>Bapak Imam Ansori, </span></h4> -->
-            <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
-            <h1>Khairah & Choir</h1>
-            <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <div class="invitation-box">
+                        <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
+                        <!-- <h1>Khairah & Choir</h1> -->
+                        <h1 class="one-line-text">Khairah & Choir</h1>
+                        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="simply-countdown"></div>
             <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
         </main>
 
     </section>
 
-    <!-- <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">Dino</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dino</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="#home">Home</a>
-                        <a class="nav-link" href="#info">Info</a>
-                        <a class="nav-link" href="#story">Story</a>
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                        <a class="nav-link" href="#rsvp">RSVP</a>
-                        <a class="nav-link" href="#gifts">Gifts</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav> -->
+    
     <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
         <div class="container">
             <a class="navbar-brand" href="#">KC</a>
@@ -317,7 +301,7 @@
                         <img src="img/k.png" alt="Khairah & Choir 2" class="img-fluid w-100 rounded">
                     </a>
                 </div>
-                <div class="col mt-3">
+                <!-- <div class="col mt-3">
                     <a href="https://picsum.photos/id/301/1200/768" data-toggle="lightbox" data-caption="Khairah & Choir 3" data-gallery="mygallery">
                         <img src="https://picsum.photos/id/301/300/400" alt="Khairah & Choir 3" class="img-fluid w-100 rounded">
                     </a>
@@ -336,7 +320,7 @@
                     <a href="https://picsum.photos/id/305/1200/768" data-toggle="lightbox" data-caption="Khairah & Choir 6" data-gallery="mygallery">
                         <img src="https://picsum.photos/id/305/300/400" alt="Khairah & Choir 6" class="img-fluid w-100 rounded">
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -589,7 +573,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const nama = urlParams.get('n') || '';
         const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
-        <!-- const pronoun = urlParams.get('p') || 'Bapak Imam Ansori'; -->
+
         const namaContainer = document.querySelector('.hero h4 span');
         namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
 
@@ -601,11 +585,12 @@
 
 <style>
     .invitation-box {
-        border: 1px solid #ccc;
+        border: 1px solid rgba(204, 204, 204, 0.671);
         border-radius: 12px;
         padding: 16px;
         margin-bottom: 16px;
-        background-color: #f9f9f9;
+        background-color: #f9f9f9b4;
+        max-width: 100%;
     }
     
     .invitation-box p {
@@ -621,4 +606,12 @@
         list-style-type: none;
         margin-bottom: 5px;
     }
+    
+    .one-line-text {
+    white-space: nowrap; /* Agar teks tetap dalam satu baris */
+    font-size: 2.5rem; /* Atur ukuran font yang sesuai, bisa disesuaikan */
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+     /* Jika ada yang terlalu panjang, gunakan elipsis */
+}
 </style>
